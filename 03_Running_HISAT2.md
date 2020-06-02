@@ -24,6 +24,7 @@ $ samtools sort -@ 1 -o hisat2-cufflinks/Sample01.bam hisat2-cufflinks/Sample01.
 $ samtools index Sample01.bam &
 
 Remove SAM file to save space. We will use BAM file for subsequent analysis
+
 $ rm Sample01.sam &
 
 
