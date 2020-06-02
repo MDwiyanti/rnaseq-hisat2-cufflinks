@@ -4,6 +4,7 @@ Define path to tools as below, or invoke path.sh
 3.	Cufflinks: export PATH=$PATH:<path_to_cufflinks_folder>
 
 In this example, we will analyze a paired-end sequence data from Sample01.
+
 Create link to file containing raw reads in hard drive:
 
 $ ln -s /Volumes/RNAseq/Sample01/Sample01_1.fq.gz Sample01_1.fq.gz
@@ -19,6 +20,7 @@ $ hisat2 --dta-cufflinks -p 1 --rg-id Sample01 -x Gmax -1 Sample01_1.fq.gz -2 Sa
 Use samtools to sort and convert SAM file to BAM file, create index for BAM file
 
 $ samtools sort -@ 1 -o hisat2-cufflinks/Sample01.bam hisat2-cufflinks/Sample01.sam &
+
 $ samtools index Sample01.bam &
 
 Remove SAM file to save space. We will use BAM file for subsequent analysis
