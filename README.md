@@ -1,1 +1,0 @@
-# rnaseq-hisat2-cufflinks
