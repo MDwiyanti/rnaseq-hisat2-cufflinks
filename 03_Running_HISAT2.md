@@ -1,4 +1,4 @@
-Define path to tools as below, or invoke path.sh
+Define path to tools as below, 
 1.	HISAT2: export PATH=$PATH:<path_to_hisat2_folder>
 2.	Samtools: export PATH=$PATH:<path_to_samtools_folder>
 3.	Cufflinks: export PATH=$PATH:<path_to_cufflinks_folder>
