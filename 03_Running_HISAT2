@@ -1,15 +1,16 @@
-Define path to tools as below, 
-1.	HISAT2: export PATH=$PATH:<path_to_hisat2_folder>
-2.	Samtools: export PATH=$PATH:<path_to_samtools_folder>
-3.	Cufflinks: export PATH=$PATH:<path_to_cufflinks_folder>
+#Define path to HISAT2, samtools, cufflinks as following:
 
-In this example, we will analyze a paired-end sequence data from Sample01.
+export PATH=$PATH:<path_to_hisat2_folder>:<path_to_samtools_folder>:<path_to_cufflinks_folder>
 
-Create link to file containing raw reads in hard drive:
 
-$ ln -s /Volumes/RNAseq/Sample01/Sample01_1.fq.gz Sample01_1.fq.gz
+#In this example, we will analyze a paired-end sequence data of Sample01
+#First pair: Sample01_1.fq.gz and second pair: Sample01_2.fq.gz
 
-$ ln -s /Volumes/RNAseq/Sample01/Sample01_2.fq.gz Sample01_2.fq.gz
+#Create link to  raw reads files located in hard drive:
+
+ln -s /Volumes/RNAseq/Sample01/Sample01_1.fq.gz Sample01_1.fq.gz
+
+ln -s /Volumes/RNAseq/Sample01/Sample01_2.fq.gz Sample01_2.fq.gz
 
 
 Running HISAT2:
