@@ -31,6 +31,12 @@ Build HISAT2 index for reference genome:
             hisat2-build Gmax_275_v2.0.fa Gmax &
 
 
+Create directory for each sample.
+
+In Sample directory, create link to raw reads (paired-end data of Sample01 : Sample01_fq.gz and Sample01_2.fq.gz)
+
+            ln -s <path_to_folder>/Sample01_1.fq.gz Sample01_1.fq.gz
+            ln -s <path_to_folder>/Sample01_2.fq.gz Sample01_2.fq.gz
 
 
 
