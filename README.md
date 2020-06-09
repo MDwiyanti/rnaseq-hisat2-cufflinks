@@ -25,9 +25,10 @@ To download:
     - assembly: Gmax_275_v2.0.fa
 6. Create new folder in local computer for these files.
 
+
 Build HISAT2 index for reference genome:
 
-$ hisat2-build Gmax_275_v2.0.fa Gmax &
+            hisat2-build Gmax_275_v2.0.fa Gmax &
 
 
 
