@@ -32,9 +32,11 @@ Workflow:
             hisat2-build Gmax_275_v2.0.fa Gmax &
 
 
-2. Create directory for each sample. For example: Sample01
+2. Create rnaseq_analysis directory.
 
-3. In Sample01 directory, create link to raw reads (paired-end data of Sample01 : Sample01_fq.gz and Sample01_2.fq.gz)
+3. Create directory for each sample. For example, Sample01.
+
+   In Sample01 directory, create link to raw reads (paired-end data of Sample01 : Sample01_fq.gz and Sample01_2.fq.gz)
 
             ln -s <path_to_folder>/Sample01_1.fq.gz Sample01_1.fq.gz
             ln -s <path_to_folder>/Sample01_2.fq.gz Sample01_2.fq.gz
@@ -51,7 +53,7 @@ Workflow:
             
     Do this every time you open Terminal.
     
-    Or, create a .bashrc file to store the path in Terminal.
+    Or, create a .bashrc file in rnaseq_directory to store the path. 
   
     
             touch .bashrc
@@ -69,7 +71,10 @@ Workflow:
             source .bashrc 
     
     
-5.   
+5.  
+
+
+sh hisat2.sh  <threads>  <reference_genome_index> <pair1> <pair2> 
     
     
     
