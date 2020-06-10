@@ -23,7 +23,7 @@ To download:
 5. Three files to be downloaded : 
     - annotation folder: Gmax_275_Wm82.a2.v1.annotation_info.txt; Gmax_275_Wm82.a2.v1.gene.gff3
     - assembly: Gmax_275_v2.0.fa
-6. Create new folder in local computer for these files.
+6. Create new folder in local computer for these files: for example, reference in Desktop.
 
 Workflow:
 
@@ -71,10 +71,18 @@ Workflow:
             source .bashrc 
     
     
-5.  
+5.  The hisat2.sh workflow contains series of commands from alignment using hisat2 to BAM file creation for cufflinks input.
 
-
-sh hisat2.sh  <threads>  <reference_genome_index> <pair1> <pair2> 
+        sh hisat2.sh  <threads>  <path_to_folder>/<reference_genome_index> <pair1> <pair2> 
+        
+    threads : number of threads to be used in hisat2 analysis
+    reference_genome_index : index of reference genome created by hisat2-build (Gmax)
+    pair1 : first pair of paired-end files
+    pair2 : second pair of paired-end files
+    
+    For example, we will run Sample01 using thread=3 
+    
+        sh hisat2.sh 3 Desktop/reference/Gmax Sample01_1.fq.gz Sample01_2.fq.gz
     
     
     
