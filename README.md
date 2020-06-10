@@ -25,18 +25,62 @@ To download:
     - assembly: Gmax_275_v2.0.fa
 6. Create new folder in local computer for these files.
 
+Workflow:
 
-Build HISAT2 index for reference genome:
+1. One time action: build HISAT2 index for reference genome
 
             hisat2-build Gmax_275_v2.0.fa Gmax &
 
 
-Create directory for each sample.
+2. Create directory for each sample. For example: Sample01
 
-In Sample directory, create link to raw reads (paired-end data of Sample01 : Sample01_fq.gz and Sample01_2.fq.gz)
+3. In Sample01 directory, create link to raw reads (paired-end data of Sample01 : Sample01_fq.gz and Sample01_2.fq.gz)
 
             ln -s <path_to_folder>/Sample01_1.fq.gz Sample01_1.fq.gz
             ln -s <path_to_folder>/Sample01_2.fq.gz Sample01_2.fq.gz
+            
+            
+4.  Export path to directory containing hisat2, samtools, cufflinks.
+
+    <path_to_folder> defines path to where the tools are stored. 
+    
+    For example, if hisat2 is stored in Desktop/Sofwares directory, then define the path as /Desktop/Softwares/hisat2.
+    
+
+            export PATH=$PATH:~/<path_to_folder>/cufflinks/:~/<path_to_folder>/hisat2/~/<path_to_folder>/samtools
+            
+    Do this every time you open Terminal.
+    
+    Or, create a .bashrc file to store the path in Terminal.
+  
+    
+            touch .bashrc
+            
+            nano .bashrc
+            
+    
+    In .bashrc, type or copy-paste the path above.
+    
+    Save by using ^O (Ctrl-C then Ctrl-O), exit by using ^E (Ctrl-C then Ctrl-E).
+    
+    You still need to call .bashrc every time you open the Terminal, but no need to type the whole path.
+    
+  
+            source .bashrc 
+    
+    
+5.   
+    
+    
+    
+            
+    
+    
+            
+    
+            
+    
+    
 
 
 
