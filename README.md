@@ -135,9 +135,15 @@ Workflow:
             
             
      In command above, we compare Sample01 and Sample02, both have two replications. 
+     
      -L condition labels
+     
      -b reference genome
+     
      -u merged gtf list produced after cuffmerge
+     
+     
+     
      
             
             
