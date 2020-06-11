@@ -73,6 +73,8 @@ Workflow:
     
 5.  The hisat2.sh workflow contains series of commands from alignment using hisat2 to BAM file creation for cufflinks input.
 
+    In Sample01 directory:
+
         sh hisat2.sh  <threads>  <path_to_folder>/<reference_genome_index> <pair1> <pair2> 
         
     threads : number of threads to be used in hisat2 analysis
@@ -83,6 +85,14 @@ Workflow:
     For example, we will run Sample01 using thread=3 
     
         sh hisat2.sh 3 Desktop/reference/Gmax Sample01_1.fq.gz Sample01_2.fq.gz
+        
+        
+   The original flow from hisat2 to samtools can be seen in hisat2.sh.
+   
+   
+6.  Cufflinks - cuffmerge - cuffdiff
+
+    
     
     
     
