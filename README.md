@@ -98,14 +98,14 @@ Workflow:
             mkdir cuffmerge
             mkdir cuffdiff
         
-7.   In directory cufflinks, perform following command to calculate FPKM of each sample. For example, for Sample01:
+    In directory cufflinks, perform following command to calculate FPKM of each sample. For example, for Sample01:
 
             cd cufflinks
    
             cufflinks -o Sample01 -G <path_to_folder>/Gmax_275_Wm82.a2.v1.gene.gff3 ../Sample01/Sample01.bam & 
             
             
-8.   After finishing cufflinks for all samples, continue to cuffmerge in cuffmerge directory.
+     After finishing cufflinks for all samples, continue to cuffmerge in cuffmerge directory.
 
 
             cd cuffmerge
