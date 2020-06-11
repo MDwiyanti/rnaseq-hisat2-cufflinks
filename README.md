@@ -94,11 +94,54 @@ Workflow:
 
     Create directory for cufflinks, cuffmerge, and cuffdiff
     
-        mkdir cufflinks
-        mkdir cuffmerge
-        mkdir cuffdiff
+            mkdir cufflinks
+            mkdir cuffmerge
+            mkdir cuffdiff
         
-7.   
+7.   In directory cufflinks, perform following command to calculate FPKM of each sample. For example, for Sample01:
+
+            cd cufflinks
+   
+            cufflinks -o Sample01 -G <path_to_folder>/Gmax_275_Wm82.a2.v1.gene.gff3 ../Sample01/Sample01.bam & 
+            
+            
+8.   After finishing cufflinks for all samples, continue to cuffmerge in cuffmerge directory.
+
+
+            cd cuffmerge
+            
+            
+     Get a list of files "transcript.gtf" from each sample's cufflinks directory, and save as list.txt.
+     
+     
+             find ../cufflinks/ -name "transcripts.gtf" > list.txt &
+             
+             
+     Run cuffmerge.
+     
+     
+            cuffmerge -g <path_to_folder>/Gmax_275_Wm82.a2.v1.gene.gff3 -s <path_to_folder>/Gmax.fa list.txt &
+
+
+
+     This will create a directory named merged_asm containing genes.fpkm_tracking,isoforms.fpkm_tracking, logs, skipped.gtf, 
+     and transcripts.gtf.
+     
+     
+     
+             
+     
+             
+             
+     
+            
+            
+            
+            
+
+
+        
+        
 
     
     
