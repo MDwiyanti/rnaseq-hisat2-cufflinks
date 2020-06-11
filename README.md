@@ -92,6 +92,14 @@ Workflow:
    
 6.  Cufflinks - cuffmerge - cuffdiff
 
+    Create directory for cufflinks, cuffmerge, and cuffdiff
+    
+        mkdir cufflinks
+        mkdir cuffmerge
+        mkdir cuffdiff
+        
+7.   
+
     
     
     
