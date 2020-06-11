@@ -124,7 +124,7 @@ Workflow:
 
 
 
-     This will create a directory named merged_asm containing genes.fpkm_tracking,isoforms.fpkm_tracking, logs, skipped.gtf, 
+     This will create a directory named merged_asm containing genes.fpkm_tracking, isoforms.fpkm_tracking, skipped.gtf, 
      and transcripts.gtf.
      
      
