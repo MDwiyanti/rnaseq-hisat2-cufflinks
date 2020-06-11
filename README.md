@@ -126,6 +126,24 @@ Workflow:
 
      This will create a directory named merged_asm containing merged.gtf.
      
+     Finally, run cuffdiff in cuffdiff directory. For example, running comparison between Sample01 and Sample02.
+     
+     
+            cd cuffdiff
+            
+            cuffdiff -o Sample01-02 -L Sample01,Sample02 -b ../../Gmax.fa -u ../cuffmerge/merged_asm/merged.gtf ../Sample01/Sample01.bam,../Sample01_2/Sample01_2.bam ../Sample02/Sample02.bam,../Sample02_2/Sample02_2.bam &
+            
+            
+     In command above, we compare Sample01 and Sample02, both have two replications. 
+     -L condition labels
+     -b reference genome
+     -u merged gtf list produced after cuffmerge
+     
+            
+            
+            
+     
+     
      
      
      
